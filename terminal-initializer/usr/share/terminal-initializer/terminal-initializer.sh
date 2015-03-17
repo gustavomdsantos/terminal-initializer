@@ -7,23 +7,24 @@
 # for more details.
 
 APP_NAME="Terminal Initializer"
-VERSION="0.2.0"
+VERSION="0.2.1"
 APP_AUTHOR="Copyright (C) 2014-2015 Gustavo Moraes, Pedro Henrique 
     <gustavosotnas1@gmail.com>, <pedrohenriquedrim@gmail.com>"
+APP_CMD_NAME="terminal-initializer"
 
 function setText_PTBR()
 {
 	# Padrão de lista de ajuda: 1 TAB antes do nome da opção e 5 TAB antes da descrição da opção
 	HELP_TEXT="
 Uso:
-	$USER_INSTALL_HOME_NAME
-	$USER_INSTALL_HOME_NAME [OPÇÃO]
+	$APP_CMD_NAME
+	$APP_CMD_NAME [OPÇÃO]
 
 $APP_NAME é um pequeno programa para exibir arquivos de texto 
 aleatoriamente no Terminal. O programa vem por padrão com quatro 
 exemplos de \"Tux ASCII Art\", mas serve qualquer dica (texto) 
 que queira mostrar ao logar no seu terminal, até mesmo piadas.
-Basta colocar algum arquivo de texto na pasta \"$USER_INSTALL_HOME_NAME\" 
+Basta colocar algum arquivo de texto na pasta \"$APP_CMD_NAME\" 
 localizada na sua pasta inicial e pronto.
 
 Opções:
