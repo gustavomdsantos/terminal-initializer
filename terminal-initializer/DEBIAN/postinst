@@ -3,10 +3,10 @@
 set -e; # Caso algum erro aconteça na execução de qualquer comando abaixo, o script será finalizado automaticamente.
 
 # Muda proprietário dos arquivos na pasta de destino (root para "$USER")
-chown --recursive "$USER" /usr/share/terminal-initializer;
+chown -v --recursive "$USER" /usr/share/terminal-initializer;
 
 # Cria links para root
-mkdir -p /root/terminal-initializer && ln -s /usr/share/terminal-initializer/files /root/terminal-initializer/files;
+mkdir -p -v /root/terminal-initializer && ln -s /usr/share/terminal-initializer/files /root/terminal-initializer/files;
 
 # Cria links para usuários comuns
 	declare -i NUM_USERS; # A variável NUM_USERS é do tipo inteiro ("int")
@@ -15,10 +15,11 @@ mkdir -p /root/terminal-initializer && ln -s /usr/share/terminal-initializer/fil
 	do
 		USER_CHOSEN=$(ls -1 /home | tail -n $n | head -n 1); 
 
-		mkdir -p /home/$USER_CHOSEN/terminal-initializer;
-		chown $USER_CHOSEN /home/$USER_CHOSEN/terminal-initializer;
-		ln -s /usr/share/terminal-initializer/files /home/$USER_CHOSEN/terminal-initializer/files;
+		mkdir -p -v /home/$USER_CHOSEN/terminal-initializer;
+		chown -v $USER_CHOSEN /home/$USER_CHOSEN/terminal-initializer;
+		ln -v -s /usr/share/terminal-initializer/files /home/$USER_CHOSEN/terminal-initializer/files;
 	done;
 
 # Adiciona chamada do programa no script de inicialização do "bash"
 echo -e "\nterminal-initializer" >> /etc/bash.bashrc;
+echo "/etc/bash.bashrc modded."

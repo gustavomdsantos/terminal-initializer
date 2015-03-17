@@ -1,0 +1,16 @@
+#! /bin/bash
+
+set -e; # Caso algum erro aconteça na execução de qualquer comando abaixo, o script será finalizado automaticamente.
+
+# Deleta a pasta terminal-initializer no root (com links)
+	rm -f -R -v /root/terminal-initializer;
+
+# Cria links para usuários comuns
+	declare -i NUM_USERS; # A variável NUM_USERS é do tipo inteiro ("int")
+	NUM_USERS=`ls -l /home | wc -l`-1; # Quantidade de usuários comuns no sistema
+	for ((n=1; n <= NUM_USERS ; n++))
+	do
+		USER_CHOSEN=$(ls -1 /home | tail -n $n | head -n 1); 
+
+		rm -f -R -v /home/$USER_CHOSEN/terminal-initializer;
+	done;
