@@ -1,0 +1,17 @@
+ 
+         .a88888b.       
+         8P"YP"Y88       
+         8|o||o|88       
+         8'    .88       
+         8`._.' Y8.      
+        d/      `8b.     
+      .dP   .     Y8b.        === Terminal do DISTRIB_NOME ===
+     d8:'   "   `::88b.       === Linux Kernel: KERNEL_VERSAO ===
+    d8"           `Y88b   
+   :8P     '       :888   
+    8a.    :      _a88P   
+  ._/"Yaa_ :    .| 88P|   
+  \    YP"      `| 8P  `. 
+  /     \._____.d|    .'  
+  `--..__)888888P`._.'
+ 

@@ -1,0 +1,4 @@
+     _
+    *v*       === Terminal do DISTRIB_NOME ===
+   /(_)\      === Linux Kernel: KERNEL_VERSAO ===
+    ^ ^
