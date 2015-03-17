@@ -14,3 +14,42 @@ set -e; # Caso algum erro aconteça na execução de qualquer comando abaixo, o 
 
 		rm -f -R -v /home/$USER_CHOSEN/terminal-initializer;
 	done;
+
+# Remove chamada do programa no script de inicialização do "bash"
+python << EOF > /dev/null 2>&1 # Python dentro de Shell Script
+class LocateWord:
+	palavra = ""
+	linhas = []
+
+	def __init__ (self , arquivo , palavra):
+		arq = open(arquivo , 'r+')
+
+		LocateWord.palavra = palavra
+		self.pesquisar (arq)
+		arq.close
+		self.editar(arq)
+		print(arquivo + " modded.")
+
+	def pesquisar (self , arquivo):
+		LocateWord.linhas = arquivo.readlines()
+		cont = 0
+
+		for i in LocateWord.linhas:
+			if (i == LocateWord.palavra+'\n'):
+				del LocateWord.linhas[cont]
+				if (LocateWord.linhas[cont-1] == "\n"): 
+					del LocateWord.linhas[cont-1]	
+			cont = cont + 1
+
+	def editar (self , arquivo):
+		r_arq = open(arquivo.name , 'w')
+		for i in LocateWord.linhas:
+			r_arq.write(i)
+		r_arq.close
+
+#Entre com os seguintes parametros: 
+	#locateWord(1,2)
+	#Parametro 1: O nome do arquivo (ex. texto.txt)
+	#Paremetro 2: A palavra-chave que voce deseja excluir do arquivo (ex. "palavra-chave")
+LocateWord ('/etc/bash.bashrc' , 'terminal-initializer')
+EOF
