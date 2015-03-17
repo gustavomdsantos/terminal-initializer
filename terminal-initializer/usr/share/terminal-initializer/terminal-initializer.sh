@@ -7,9 +7,59 @@
 # for more details.
 
 APP_NAME="Terminal Initializer"
-VERSION="0.1.0"
-APP_AUTHOR="Copyright (C) 2014-2015 Gustavo Moraes http://about.me/gustavosotnas"
+VERSION="0.2.0"
+APP_AUTHOR="Copyright (C) 2014-2015 Gustavo Moraes, Pedro Henrique 
+    <gustavosotnas1@gmail.com>, <pedrohenriquedrim@gmail.com>"
 
+function setText_PTBR()
+{
+	# Padrão de lista de ajuda: 1 TAB antes do nome da opção e 5 TAB antes da descrição da opção
+	HELP_TEXT="
+Uso:
+	$USER_INSTALL_HOME_NAME
+	$USER_INSTALL_HOME_NAME [OPÇÃO]
+
+$APP_NAME é um pequeno programa para exibir arquivos de texto 
+aleatoriamente no Terminal. O programa vem por padrão com quatro 
+exemplos de \"Tux ASCII Art\", mas serve qualquer dica (texto) 
+que queira mostrar ao logar no seu terminal, até mesmo piadas.
+Basta colocar algum arquivo de texto na pasta \"$USER_INSTALL_HOME_NAME\" 
+localizada na sua pasta inicial e pronto.
+
+Opções:
+	-h, --help				Mostra esta ajuda e finaliza
+	--version				Mostra informações de versão e finaliza
+
+$APP_AUTHOR
+"
+	ERROR_OPTION_TEXT="Esta opção não está disponível. Use --help para ver todas as opções disponíveis."
+}
+
+function detectSystemLanguage()
+{
+	case $LANG in
+		*pt*) setText_PTBR;; # Texto do programa em português
+		*) setText_PTBR;;
+	esac;
+}
+
+function displayHelp()
+{
+	echo "$HELP_TEXT";
+}
+
+function displayVersion()
+{
+	echo "$APP_VERSION";
+}
+
+function displayOptionError()
+{
+	>&2 echo "$ERROR_OPTION_TEXT";
+}
+
+function exec_dicas()
+{
 	# ls → lista os arquivos do diretório, um arquivo por linha e wc -l → conta a qtd de linhas
 	QTD_LINHAS=$(ls -1 $HOME/terminal-initializer/files/ | wc -l);
 
@@ -32,3 +82,19 @@ APP_AUTHOR="Copyright (C) 2014-2015 Gustavo Moraes http://about.me/gustavosotnas
 
 	# mostra na tela
 	echo "$FINAL";
+}
+
+###### "MAIN" ######
+
+if [ -z $* ] # se nenhum parâmetro foi passado para o programa
+then
+	exec_dicas; # executa a funcionalidade principal
+else
+	detectSystemLanguage;
+	case $1 in
+		"-h") displayHelp;;
+		"--help") displayHelp;;
+		"--version") displayVersion;;
+		*) displayOptionError;;
+	esac;
+fi
