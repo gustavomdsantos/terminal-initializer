@@ -1,0 +1,16 @@
+Package: terminal-initializer
+Version: 0.1.0
+Section: misc
+Maintainer: Gustavo Moraes <gustavosotnas1@gmail.com>
+Homepage: https://github.com/gustavosotnas/terminal-initializer
+Installed-Size: 3
+Priority: optional
+Architecture: all
+Depends: lsb-release
+Description: Terminal Initializer
+ Terminal Initializer is a small program made in Bash to display random text files in Terminal.
+ .
+ The program comes by default with four examples of "Tux ASCII Art", but serves any hint (text) you want to show at the log in of your terminal, even jokes. 
+ .
+ Just put some text file in the folder "terminalInitializer" located in your HOME folder and ready.
+

@@ -7,24 +7,24 @@
 # for more details.
 
 	# ls → lista os arquivos do diretório, um arquivo por linha e wc -l → conta a qtd de linhas
-	QTD_LINHAS=$(ls -1 $HOME/terminalInitializer/files/ | wc -l)
+	QTD_LINHAS=$(ls -1 $HOME/terminalInitializer/files/ | wc -l);
 
 	# sorteia um número aleatório limitado à quantidade de arquivos do diretório de dicas
-	LINHA=$[RANDOM%$QTD_LINHAS+1]
+	LINHA=$[RANDOM%$QTD_LINHAS+1];
 
 	# lista novamente os arquivos, e recupera o nome do arquivo na linha sorteada
-	ARQ=$(ls -1 $HOME/terminalInitializer/files/ | tail -n $LINHA | head -n 1)
+	ARQ=$(ls -1 $HOME/terminalInitializer/files/ | tail -n $LINHA | head -n 1);
 
 	# lê o arquivo da dica
-	TEXTO="`cat "$HOME/terminalInitializer/files/$ARQ"`"
+	TEXTO="`cat "$HOME/terminalInitializer/files/$ARQ"`";
 
 	# obtem as informacoes do nome da distribuição e do kernel Linux
-	DISTRIB_NOME=$(lsb_release -sd)
-	KERNEL_VER=$(uname -r)
+	DISTRIB_NOME=$(lsb_release -sd);
+	KERNEL_VER=$(uname -r);
 
 	# substitui as palavras-chave no arquivo pelo conteúdo das variáveis
-	TEXTOA="`echo "${TEXTO//DISTRIB_NOME/$DISTRIB_NOME}"`"
-	FINAL="`echo "${TEXTOA//KERNEL_VERSAO/$KERNEL_VER}"`"
+	TEXTOA="`echo "${TEXTO//DISTRIB_NOME/$DISTRIB_NOME}"`";
+	FINAL="`echo "${TEXTOA//KERNEL_VERSAO/$KERNEL_VER}"`";
 
 	# mostra na tela
-	echo "$FINAL"
+	echo "$FINAL";
