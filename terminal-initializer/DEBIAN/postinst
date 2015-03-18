@@ -1,5 +1,11 @@
 #! /bin/bash
 
+# Author: Gustavo Moraes <gustavosotnas@gmail.com>
+#
+# This file is subject to the terms and conditions of the GNU General Public
+# License. See the file COPYING in the main directory of this archive
+# for more details.
+
 set -e; # Caso algum erro aconteça na execução de qualquer comando abaixo, o script será finalizado automaticamente.
 
 # Adiciona chamada do programa no script de inicialização do "bash"

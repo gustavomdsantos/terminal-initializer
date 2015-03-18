@@ -7,7 +7,7 @@
 # for more details.
 
 APP_NAME="Terminal Initializer"
-VERSION="0.2.1"
+VERSION="1.0"
 APP_AUTHOR="Copyright (C) 2014-2015 Gustavo Moraes, Pedro Henrique 
     <gustavosotnas1@gmail.com>, <pedrohenriquedrim@gmail.com>"
 APP_CMD_NAME="terminal-initializer"
@@ -36,11 +36,60 @@ $APP_AUTHOR
 	ERROR_OPTION_TEXT="Esta opção não está disponível. Use --help para ver todas as opções disponíveis."
 }
 
+function setText_ES()
+{
+	# Padrão de lista de ajuda: 1 TAB antes do nome da opção e 5 TAB antes da descrição da opção
+	HELP_TEXT="
+Uso:
+	$USER_INSTALL_HOME_NAME
+	$USER_INSTALL_HOME_NAME [OPCIÓN]
+
+$APP_NAME es un pequeño programa para visualizar archivos de texto 
+aleatoriamente en el Terminal. El programa viene de fábrica con cuatro 
+ejemplos de \"Tux arte ASCII\", pero sirve cualquier información (texto) 
+que desea mostrar en el log in en su terminal, incluso chistes.
+Simplemente poner algún archivo de texto en la carpeta \"$USER_INSTALL_HOME_NAME\" 
+que se encuentra en su carpeta de inicio y listo.
+
+Opciones:
+	-h, --help				Muestra esta ayuda y finaliza
+	--version				Muestra información de versión y finaliza
+
+$APP_AUTHOR
+"
+	ERROR_OPTION_TEXT="Esta opción no está disponible. Use --help para ver todas las opciones disponibles."
+}
+
+function setText_EN()
+{
+	HELP_TEXT="
+Usage:
+	$USER_INSTALL_HOME_NAME
+	$USER_INSTALL_HOME_NAME [OPTION]
+
+$APP_NAME is a small program to display random text files 
+in Terminal. The program comes by default with four 
+examples of \"Tux ASCII Art\", but serves any hint (text) 
+you want to show at the log in of your terminal, even jokes. 
+Just put some text file in the folder \"$USER_INSTALL_HOME_NAME\" 
+located in your HOME folder and ready.
+
+Options:
+	-h, --help				Display this help and exit
+	--version				Output version information and exit
+
+$APP_AUTHOR
+"
+	ERROR_OPTION_TEXT="This option is not available. Use --help to see all available options."
+}
+
 function detectSystemLanguage()
 {
 	case $LANG in
-		*pt*) setText_PTBR;; # Texto do programa em português
-		*) setText_PTBR;;
+		*en*) setText_EN;;
+		*es*) setText_ES;;
+		*pt*) setText_PTBR;;
+		*) setText_EN;;
 	esac;
 }
 
