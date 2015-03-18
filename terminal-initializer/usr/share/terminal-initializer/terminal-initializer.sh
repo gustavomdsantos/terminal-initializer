@@ -7,7 +7,7 @@
 # for more details.
 
 APP_NAME="Terminal Initializer"
-VERSION="1.0"
+VERSION="1.0.1"
 APP_AUTHOR="Copyright (C) 2014-2015 Gustavo Moraes, Pedro Henrique 
     <gustavosotnas1@gmail.com>, <pedrohenriquedrim@gmail.com>"
 APP_CMD_NAME="terminal-initializer"
@@ -100,7 +100,7 @@ function displayHelp()
 
 function displayVersion()
 {
-	echo "$APP_VERSION";
+	echo "$VERSION";
 }
 
 function displayOptionError()
