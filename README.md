@@ -13,7 +13,7 @@ Language
 English
 --------------------------
 
-**Terminal Initializer** is a small program made in Bash to display random text files in Linux Terminals.
+**Terminal Initializer** is a small program written in Bash to display random text files in Linux Terminals.
 
 The program comes by default with four examples of "Tux ASCII Art", but serves any hint (text) you want to show on initialization of your Linux terminal, even jokes. Just put some text file in the "terminal-initializer" folder located in your HOME directory and ready.
 
