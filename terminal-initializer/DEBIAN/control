@@ -1,9 +1,9 @@
 Package: terminal-initializer
-Version: 1.0.1
+Version: 1.0.2
 Section: misc
 Maintainer: Gustavo Moraes <gustavosotnas1@gmail.com>
 Homepage: https://github.com/gustavosotnas/terminal-initializer
-Installed-Size: 10
+Installed-Size: 25
 Priority: optional
 Architecture: all
 Depends: lsb-release
