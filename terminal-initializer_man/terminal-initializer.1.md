@@ -1,9 +1,11 @@
 terminal-initializer(1) - display text messages in terminal init
 ================================================================
 
-<!-- Arquivo Markdown escrito para a criação do arquivo de manual (roff manpage) usando a ferramenta "ronn"
-Comando para converter o .md para .1.gz (na pasta atual):
-	ronn -roff terminal-initializer.1.md && gzip terminal-initializer.1 && mv terminal-initializer.1.gz ../terminal-initializer/usr/share/man/man1
+<!-- Markdown file written to creating application manual file (roff manpage) using "ronn" tool:
+Command to convert "*.md" to "*.1.gz" (in the "terminal-initializer_man" folder):
+	ronn -roff terminal-initializer.1.md && gzip -9 terminal-initializer.1 && mv terminal-initializer.1.gz ../terminal-initializer/usr/share/man/man1
+To preview the man page using man, enter the command:
+    man ../terminal-initializer/usr/share/man/man1/terminal-initializer.1.gz
 -->
 
 ## SYNOPSIS
@@ -13,7 +15,7 @@ terminal-initializer [OPTION]
 
 ## DESCRIPTION
 
-**Terminal Initializer** displays random text files in the initialization of Linux BASH Terminals. Inspired by `fortune`, when `terminal-initializer` is run with no arguments, it prints out a random text message. However, `terminal-initializer` is more flexible than `fortune` in adding "epigram" files, supports specific variables (terminal name and Linux kernel) and it's easy to expand.
+**Terminal Initializer** displays random text files in the initialization of Linux BASH Terminals. Inspired by `fortune`, when `terminal-initializer` is run with no arguments, it prints out a random text message. However, `terminal-initializer` is more flexible than `fortune` in adding "epigram" files, supports specific variables (terminal name and Linux kernel version) and it's easy to expand.
 
 The program comes by default with four examples of "Tux ASCII Art", but serves any hint (text) you want to show on initialization of your terminal, even jokes.
 
@@ -21,7 +23,7 @@ The program comes by default with four examples of "Tux ASCII Art", but serves a
  * Open "terminal-initializer" folder inside your HOME directory;
  * Create a plain-text file inside "files" folder;
  * Write in the file what do you want (ASCII Art, epigram, quote, Bible verse etc.)
- * `terminal-initializer` supports by default 2 variables in files: <br> **DISTRIB_NOME** (Linux distribution name) and <br> **KERNEL_VERSAO** (Linux kernel version). If you want use display that info in your new file, write this variables in the file.
+ * `terminal-initializer` supports by default 2 variables in files: <br> **DISTRIB_NOME** (Linux distribution name) and <br> **KERNEL_VERSAO** (Linux kernel version). If you want to display that info in your new file, write this variables in the file.
  * Save and close. On the next `terminal-initializer` execution the new file can be displayed.
 
 ## OPTIONS
