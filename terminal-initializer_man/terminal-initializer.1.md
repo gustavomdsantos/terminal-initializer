@@ -15,7 +15,7 @@ terminal-initializer [OPTION]
 
 ## DESCRIPTION
 
-**Terminal Initializer** displays random text files in the initialization of Linux BASH Terminals. Inspired by `fortune`, when `terminal-initializer` is run with no arguments, it prints out a random text message. However, `terminal-initializer` is more flexible than `fortune` in adding "epigram" files, supports specific variables (terminal name and Linux kernel version) and it's easy to expand.
+**Terminal Initializer** displays random text files in the initialization of Linux BASH Terminals. Inspired by `fortune`, when `terminal-initializer` is run with no arguments, it prints out a random text and a "command of the day" message. However, `terminal-initializer` is more flexible than `fortune` in adding "epigram" files, supports specific variables (terminal name and Linux kernel version) and it's easy to expand.
 
 The program comes by default with four examples of "Tux ASCII Art", but serves any hint (text) you want to show on initialization of your terminal, even jokes.
 

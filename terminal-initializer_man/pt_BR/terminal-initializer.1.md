@@ -1,5 +1,5 @@
 terminal-initializer(1) - exibe mensagens de texto na inicialização do terminal
-================================================================
+===============================================================================
 
 <!-- Arquivo Markdown escrito para a criação do arquivo de manual (roff manpage) em Português-Brasil usando a ferramenta "ronn"
 Comando para converter o .md para .1.gz (na pasta "terminal-initializer_man"):
@@ -15,7 +15,7 @@ terminal-initializer [OPÇÃO]
 
 ## DESCRIÇÃO
 
-**Terminal Initializer** mostra arquivos de texto aleatoriamente na inicialização de terminais BASH do Linux. Inspirado pelo `fortune`, quando o `terminal-initializer` é executado sem argumentos, ele exibe uma mensagem de texto aleatória. No entanto, o `terminal-initializer` é mais flexível que o `fortune` em adicionar arquivos de "epigrama", suporta variáveis específicas (nome do terminal e versão do Kernel do Linux) e é expansível.
+**Terminal Initializer** mostra arquivos de texto aleatoriamente na inicialização de terminais BASH do Linux. Inspirado pelo `fortune`, quando o `terminal-initializer` é executado sem argumentos, ele exibe uma mensagem de texto e um "comando do dia" aleatórios. No entanto, o `terminal-initializer` é mais flexível que o `fortune` em adicionar arquivos de "epigrama", suporta variáveis específicas (nome do terminal e versão do Kernel do Linux) e é expansível.
 
 O programa vem por padrão com quatro exemplos de "Tux ASCII Art", mas serve pra qualquer dica (texto) que você queira mostrar na inicialização do seu terminal, até mesmo piadas.
 
