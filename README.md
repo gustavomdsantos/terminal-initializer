@@ -2,10 +2,10 @@
 ![terminal-initializer](http://icons.iconarchive.com/icons/alecive/flatwoken/48/Apps-Terminal-icon.png) Terminal Initializer
 ============================================================================================================================
 
-[![Stories in Backlog](https://img.shields.io/github/issues-raw/gustavosotnas/terminal-initializer.svg?label=backlog&style=plastic)](https://waffle.io/gustavosotnas/terminal-initializer)
-[![Stories in Ready](https://badge.waffle.io/gustavosotnas/quick-deb-builder.png?label=ready&title=ready)](https://waffle.io/gustavosotnas/quick-deb-builder)
-[![GitHub license](https://img.shields.io/github/license/gustavosotnas/terminal-initializer.svg?style=plastic)](https://github.com/gustavosotnas/terminal-initializer/blob/master/COPYING)
-[![GitHub release](https://img.shields.io/github/release/gustavosotnas/terminal-initializer.svg?style=plastic)](https://github.com/gustavosotnas/terminal-initializer/releases/latest)
+[![Stories in Backlog](https://img.shields.io/github/issues-raw/gustavosotnas/terminal-initializer.svg?label=backlog)](https://waffle.io/gustavosotnas/terminal-initializer)
+[![GitHub license](https://img.shields.io/badge/license-GNU%20GPL%20v2.0-428f7e.svg)](https://github.com/gustavosotnas/terminal-initializer/blob/master/COPYING)
+[![GitHub release](https://img.shields.io/github/release/gustavosotnas/terminal-initializer.svg?label=stable)](https://github.com/gustavosotnas/terminal-initializer/releases/latest)
+[![GitHub tag](https://img.shields.io/github/tag/gustavosotnas/terminal-initializer.svg?label=development)](https://github.com/gustavosotnas/terminal-initializer/releases)
 
 English
 --------------------------
