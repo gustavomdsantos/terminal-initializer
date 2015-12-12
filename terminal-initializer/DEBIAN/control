@@ -1,5 +1,5 @@
 Package: terminal-initializer
-Version: 1.0.2
+Version: 1.1.0
 Section: misc
 Maintainer: Gustavo Moraes <gustavosotnas1@gmail.com>
 Homepage: https://github.com/gustavosotnas/terminal-initializer
@@ -13,7 +13,7 @@ Description: Terminal Initializer
  .
  The program comes by default with four examples of "Tux ASCII Art", 
  but serves any hint (text) you want to show at the log in of your 
- terminal, even jokes. 
+ terminal, even jokes. It shows a "command of the day" too.
  .
  Just put some text file in the folder "terminalInitializer" located 
  in your HOME folder and ready.
