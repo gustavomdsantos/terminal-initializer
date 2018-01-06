@@ -173,6 +173,7 @@ function exec_dicas()
 	# limpa o Terminal antes de começar a imprimir
 	clear;
 
+	echo $CMD_QTD_LINHAS;
 	# lista os arquivos do diretório, um arquivo por linha
 	DIR_ARQUIVOS=$(ls -1 $HOME/terminal-initializer/files/);
 
@@ -180,27 +181,37 @@ function exec_dicas()
 	QTD_LINHAS=$(echo "$DIR_ARQUIVOS" | wc -l);
 
 	# sorteia um número aleatório limitado à quantidade de arquivos do diretório de dicas
-	LINHA=$[RANDOM%$QTD_LINHAS+1];
+	#O random aumenta +2 por incluir o screenfetch
+	LINHA=$[RANDOM%$QTD_LINHAS+2];
 
-	# lista novamente os arquivos, e recupera o nome do arquivo na linha sorteada
-	ARQ=$(echo "$DIR_ARQUIVOS" | tail -n $LINHA | head -n 1);
+	#A $LINHA+1 corresponde ao screenfetch
+	if [ $LINHA == $(($QTD_LINHAS+1)) ] && [ -f /usr/bin/screenfetch ];
+	then
+	   screenfetch;
+	else
+	
+       # lista novamente os arquivos, e recupera o nome do arquivo na linha sorteada
+	   ARQ=$(echo "$DIR_ARQUIVOS" | tail -n $LINHA | head -n 1);
 
-	# lê o arquivo da dica
-	TEXTO="`cat "$HOME/terminal-initializer/files/$ARQ"`";
+	   # lê o arquivo da dica
+	   TEXTO="`cat "$HOME/terminal-initializer/files/$ARQ"`";
 
-	# obtem as informacoes do nome da distribuição e do kernel Linux
-	DISTRIB_NOME=$(lsb_release -sd);
-	KERNEL_VER=$(uname -r);
+       # obtem as informacoes do nome da distribuição e do kernel Linux
+	   DISTRIB_NOME=$(lsb_release -sd);
+       KERNEL_VER=$(uname -r);
 
-	# substitui as palavras-chave no arquivo pelo conteúdo das variáveis
-	TEXTOA="`echo "${TEXTO//DISTRIB_NOME/$DISTRIB_NOME}"`";
-	FINAL="`echo "${TEXTOA//KERNEL_VERSAO/$KERNEL_VER}"`";
+	   # substitui as palavras-chave no arquivo pelo conteúdo das variáveis
+	   TEXTOA="`echo "${TEXTO//DISTRIB_NOME/$DISTRIB_NOME}"`";
+	   FINAL="`echo "${TEXTOA//KERNEL_VERSAO/$KERNEL_VER}"`";
 
-	# mostra texto na tela
-	echo "$FINAL";
+	   # mostra texto na tela
+	   echo "$FINAL";
+
+    fi
 
 	# mostra "comando do dia"
 	displayCommandOfTheDay;
+	
 }
 
 ###### "MAIN" ######
