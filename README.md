@@ -1,4 +1,5 @@
 [**English**](#english) | [**Português**](#português)
+
 ![terminal-initializer](http://icons.iconarchive.com/icons/alecive/flatwoken/48/Apps-Terminal-icon.png) Terminal Initializer
 ============================================================================================================================
 
